@@ -1,0 +1,91 @@
+a)SELECT YEAR(CURDATE());
+b)SELECT DATE('2024-11-21') as valid;
+c)SELECT
+   SUM(ROUND(((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024), 2)) AS "SIZE IN MB"
+   FROM INFORMATION_SCHEMA.TABLES
+   WHERE TABLE_SCHEMA = "SCHEMA-NAME";
+d)SELECT NOW();
+e) SELECT DATE_ADD("2024-07-24", INTERVAL 1 DAY);
+
+f)
+use mydb;
+create table mytable (
+name char(10),
+roll_no int(10),
+);
+SELECT table_name, create_time 
+FROM information_schema.tables 
+WHERE table_schema = 'mydb';
+g)
+SELECT CURRENT_TIMESTAMP();
+h)
+SELECT user,host from mysql.user;
+i)
+SELECT VERSION();
+j)
+SELECT 1|0 , 5^6 , 3&4;
+k)SELECT DATE_DIFF('2021/12/22','2021/11/13') as DateDiff;
+L)SELECT DATE_ADD(CURDATE(), INTERVAL 1 DAY) AS new_date;
+m)SELECT DATE_ADD(CURDATE(), INTERVAL '2.5000' HOUR_MINUTE) as next_date;
+n)SELECT CEIL(1.4), FLOOR(1.4), POWER(8, 2), MOD(14, 3), ROUND(7.8, 0), TRUNCATE(7.88, 0);
+o)SELECT 'japeth' = 'JAPETH' AS result;
+p)
+SELECT 
+    85 AS marks,
+    CASE
+        WHEN 85 >= 90 THEN 'A'
+        WHEN 85 >= 80 THEN 'B'
+        WHEN 85 >= 70 THEN 'C'
+        WHEN 85 >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade
+
+UNION ALL
+
+SELECT 
+    72 AS marks,
+    CASE
+        WHEN 72 >= 90 THEN 'A'
+        WHEN 72 >= 80 THEN 'B'
+        WHEN 72 >= 70 THEN 'C'
+        WHEN 72 >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade
+
+UNION ALL
+
+SELECT 
+    90 AS marks,
+    CASE
+        WHEN 90 >= 90 THEN 'A'
+        WHEN 90 >= 80 THEN 'B'
+        WHEN 90 >= 70 THEN 'C'
+        WHEN 90 >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade
+
+UNION ALL
+
+SELECT 
+    65 AS marks,
+    CASE
+        WHEN 65 >= 90 THEN 'A'
+        WHEN 65 >= 80 THEN 'B'
+        WHEN 65 >= 70 THEN 'C'
+        WHEN 65 >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade
+
+UNION ALL
+
+SELECT 
+    55 AS marks,
+    CASE
+        WHEN 55 >= 90 THEN 'A'
+        WHEN 55 >= 80 THEN 'B'
+        WHEN 55 >= 70 THEN 'C'
+        WHEN 55 >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade;
+q)
+SELECT IFNULL(10 / 4, 0);
